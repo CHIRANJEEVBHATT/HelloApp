@@ -2,6 +2,7 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
+
         // Hardcoded string
         String word = "madam";
 
@@ -17,6 +18,24 @@ public class PalindromeCheckerApp {
             System.out.println(word + " is a Palindrome.");
         } else {
             System.out.println(word + " is NOT a Palindrome.");
+
+        // Original string
+        String original = "level";
+
+        // Variable to store reversed string
+        String reversed = "";
+
+        // Reverse the string using for loop
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);  // String concatenation
+        }
+
+        // Compare original and reversed string using equals()
+        if (original.equals(reversed)) {
+            System.out.println(original + " is a Palindrome.");
+        } else {
+            System.out.println(original + " is NOT a Palindrome.");
+
         }
     }
 }
