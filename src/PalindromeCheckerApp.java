@@ -1,13 +1,23 @@
-public static void main(String[] args) {
+public class PalindromeCheckerApp {
 
-    String appName = "Palindrome Checker App";
-    String version = "Version 1.0";
+    public static void main(String[] args) {
 
-    System.out.println("================================================");
-    System.out.println("              " + appName);
-    System.out.println("              " + version);
-    System.out.println("================================================");
-    System.out.println("Welcome to the Palindrome Checker Application!");
-    System.out.println("This is Use Case 1: Application Entry & Welcome Message.");
-    System.out.println("Application started successfully.");
+        // Original string
+        String original = "level";
+
+        // Variable to store reversed string
+        String reversed = "";
+
+        // Reverse the string using for loop
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);  // String concatenation
+        }
+
+        // Compare original and reversed string using equals()
+        if (original.equals(reversed)) {
+            System.out.println(original + " is a Palindrome.");
+        } else {
+            System.out.println(original + " is NOT a Palindrome.");
+        }
+    }
 }
